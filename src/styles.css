@@ -20,7 +20,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-
   overflow-x: hidden;
 }
 
@@ -67,7 +66,7 @@ header {
   min-width: 500px;
 }
 
-img {
+#hunter {
   height: 800px;
   max-width: 750px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
@@ -164,6 +163,11 @@ main {
   margin-bottom: 4rem;
 }
 
+.projectPic {
+  max-height: 400px;
+  max-width: 100%;
+}
+
 .desc {
   font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.692);
@@ -176,10 +180,11 @@ main {
 .title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .svgsProject {
-  align-self: flex-end;
+  align-self: center;
   display: flex;
   gap: 1rem;
 }
@@ -197,6 +202,7 @@ footer {
   );
   padding: 6rem;
   display: flex;
+  justify-content: space-around;
 }
 
 .footerLeft {
@@ -250,7 +256,268 @@ footer {
   cursor: pointer;
 }
 
+.footerRight > img {
+  max-height: 650px;
+}
+
 svg {
   width: 50px;
   height: auto;
+}
+
+@media (max-width: 1200px) {
+  header {
+    background: white;
+    position: relative;
+    margin-bottom: 200px;
+    padding: 6rem;
+  }
+
+  .diagonalWhite {
+    position: absolute;
+    background: rgb(42, 171, 240);
+    background: linear-gradient(
+      0deg,
+      rgb(26, 138, 199) 0%,
+      rgb(33, 171, 196) 48%,
+      rgb(27, 140, 201) 99%
+    );
+    width: 100%;
+    height: 100%;
+    top: -35%;
+    right: 5%;
+    transform: rotate(-13deg) scale(1.4);
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .about {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 500px;
+    box-shadow: none;
+  }
+
+  #hunter {
+    position: absolute;
+    bottom: -400px;
+    height: 500px;
+    max-width: 750px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+  }
+
+  div.about > div.svgs {
+    display: none;
+  }
+
+  div.about > p.info {
+    text-align: justify;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-family: "Playfair Display";
+    font-weight: 100;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-family: "Playfair Display";
+    font-weight: 100;
+    margin: 0;
+  }
+
+  h1.name {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    font-size: 6rem;
+    left: 0px;
+    top: -150px;
+    text-shadow: 2px 2px 6px #00000093;
+    width: 525px;
+  }
+
+  .info {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.692);
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .svgs {
+    align-self: flex-end;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .svgButton {
+    border: none;
+    background-color: white;
+    transition: transform 0.2s ease-in;
+  }
+
+  .svgButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  main {
+    padding: 8rem;
+  }
+
+  .projects {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .projectCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+  }
+
+  .projectCard {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in;
+  }
+
+  .projectCard:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .screenshot {
+    background-color: rgb(143, 21, 21);
+  }
+
+  .projectInfo {
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .projectPic {
+    max-height: 400px;
+    max-width: 100%;
+  }
+
+  .desc {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.692);
+    max-width: 850px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .svgsProject {
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .svgButton2 > svg {
+    width: 30px;
+  }
+
+  footer {
+    background: rgb(42, 171, 240);
+    background: linear-gradient(
+      0deg,
+      rgb(26, 138, 199) 0%,
+      rgb(27, 140, 201) 99%
+    );
+    padding: 6rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    color: white;
+  }
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .contact {
+    font-size: 1.8rem;
+
+    margin: 0;
+  }
+
+  .numberMail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .number {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .number > svg {
+    fill: white;
+  }
+
+  .svgsFooter {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .svgButtonFooter {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.2s ease-in;
+  }
+
+  .svgButtonFooter:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .footerRight > img {
+    max-height: 650px;
+  }
+
+  svg {
+    width: 50px;
+    height: auto;
+  }
 }
