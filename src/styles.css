@@ -140,7 +140,7 @@ main {
 
 .projectCard {
   display: grid;
-  grid-template-rows: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in;
 }
@@ -150,21 +150,15 @@ main {
   cursor: pointer;
 }
 
-.screenshot {
-  background-color: rgb(143, 21, 21);
-}
-
 .projectInfo {
-  padding: 1rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  padding: 2.5rem;
+
   display: grid;
   gap: 2rem;
-  margin-bottom: 4rem;
 }
 
 .projectPic {
-  max-height: 400px;
+  height: 100%;
   max-width: 100%;
 }
 
@@ -267,10 +261,124 @@ svg {
 
 @media (max-width: 1200px) {
   header {
-    background: white;
-    position: relative;
-    margin-bottom: 200px;
     padding: 6rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .content {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .picName {
+    padding: 2rem;
+  }
+
+  .about {
+    box-shadow: none;
+    min-width: 0;
+  }
+
+  .about > h1 {
+    text-align: center;
+  }
+
+  #hunter {
+    position: relative;
+    height: 500px;
+  }
+
+  div.about > div.svgs {
+    display: none;
+  }
+
+  div.about > p.info {
+    text-align: justify;
+  }
+
+  h1.name {
+    left: 0px;
+    top: -150px;
+    text-shadow: 2px 2px 6px #00000093;
+    width: 525px;
+  }
+
+  .info {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+
+  main {
+    padding: 8rem;
+    padding-top: 4rem;
+  }
+
+  .projects {
+    margin-top: 4rem;
+  }
+
+  .projectCards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .projectCard {
+    max-height: 600px;
+  }
+
+  .projectInfo {
+    padding: 1.5rem;
+    overflow-y: scroll;
+  }
+
+  .desc {
+    margin-bottom: 0;
+  }
+
+  .projectPic {
+    height: 300px;
+    width: 100%;
+  }
+
+  footer {
+    gap: 2rem;
+    padding: 4rem;
+  }
+
+  .footerLeft {
+    padding: 0rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerRight > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    position: relative;
+    padding: 1rem;
+    background: none;
+    margin-bottom: 0;
   }
 
   .diagonalWhite {
@@ -282,11 +390,11 @@ svg {
       rgb(33, 171, 196) 48%,
       rgb(27, 140, 201) 99%
     );
-    width: 100%;
-    height: 100%;
-    top: -35%;
-    right: 5%;
-    transform: rotate(-13deg) scale(1.4);
+    width: 300%;
+    height: 50%;
+    top: 0%;
+    right: -100px;
+    transform: rotate(-25deg) scale(1.1);
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
   }
 
@@ -294,49 +402,52 @@ svg {
     position: relative;
     z-index: 2;
     margin: 0 auto;
-    margin-top: 8rem;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #00000000;
+    box-shadow: none;
     justify-content: center;
-    background-color: white;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 1rem;
   }
 
   .about {
-    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1rem;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    min-width: 500px;
-    box-shadow: none;
+    min-width: 0px;
+    text-align: center;
+  }
+
+  .picName {
+    height: 95%;
+    width: 90%;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 0;
   }
 
   #hunter {
-    position: absolute;
-    bottom: -400px;
-    height: 500px;
-    max-width: 750px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
-    z-index: 3;
-  }
-
-  div.about > div.svgs {
-    display: none;
-  }
-
-  div.about > p.info {
-    text-align: justify;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Playfair Display";
     font-weight: 100;
     margin: 0;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: "Playfair Display";
     font-weight: 100;
     margin: 0;
@@ -346,23 +457,25 @@ svg {
     position: absolute;
     z-index: 3;
     color: white;
-    font-size: 6rem;
-    left: 0px;
-    top: -150px;
-    text-shadow: 2px 2px 6px #00000093;
-    width: 525px;
+    font-size: 3.5rem;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    text-shadow: 2px 2px 12px #000000;
+    width: 500px;
   }
 
   .info {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.692);
-    line-height: 30px;
+    max-width: 850px;
+    line-height: 35px;
     margin: 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0rem;
   }
 
-  .svgs {
-    align-self: flex-end;
+  div.about > div.svgs {
+    align-self: center;
     display: flex;
     gap: 2rem;
   }
@@ -379,24 +492,29 @@ svg {
   }
 
   main {
-    padding: 8rem;
+    padding: 2rem;
   }
 
+  div.projects > h1 {
+    text-align: center;
+  }
   .projects {
-    margin-top: 4rem;
     display: grid;
     gap: 2rem;
+    margin-top: 2rem;
   }
 
   .projectCards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
     gap: 4rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .projectCard {
     display: grid;
-    grid-template-rows: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in;
   }
@@ -406,21 +524,15 @@ svg {
     cursor: pointer;
   }
 
-  .screenshot {
-    background-color: rgb(143, 21, 21);
-  }
-
   .projectInfo {
-    padding: 1rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    padding: 2.5rem;
+
     display: grid;
     gap: 2rem;
-    margin-bottom: 4rem;
   }
 
   .projectPic {
-    max-height: 400px;
+    height: 100%;
     max-width: 100%;
   }
 
@@ -456,9 +568,10 @@ svg {
       rgb(26, 138, 199) 0%,
       rgb(27, 140, 201) 99%
     );
-    padding: 6rem;
+    padding: 0rem;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
   }
 
   .footerLeft {
@@ -466,6 +579,7 @@ svg {
     flex-direction: column;
     gap: 4rem;
     color: white;
+    padding: 3rem;
   }
 
   .footerTop {
@@ -512,8 +626,14 @@ svg {
     cursor: pointer;
   }
 
+  .footerRight {
+    padding: 0;
+    width: 100%;
+  }
+
   .footerRight > img {
-    max-height: 650px;
+    height: 100%;
+    width: 100%;
   }
 
   svg {
