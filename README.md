@@ -2,7 +2,7 @@
 
 A responsive personal portfolio site built to showcase my web development projects and skills.
 
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/repo-name)
+
 
 ## 📋 Project Overview
 
